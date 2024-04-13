@@ -7,12 +7,13 @@ public class DrawingWithMouse : MonoBehaviour
    private LineRenderer lineRenderer;
    private Vector3 previousPosition;
     public float minDistance;
-
+    private MeshCollider meshCollider;
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 1;
         previousPosition = transform.position;
+        meshCollider = GetComponent<MeshCollider>();
     }
 
     private void Update()
@@ -42,6 +43,9 @@ public class DrawingWithMouse : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             enabled = false;
+            Mesh mesh = new Mesh();
+            lineRenderer.BakeMesh(mesh, true);
+            meshCollider.sharedMesh = mesh;
         }
 
     }

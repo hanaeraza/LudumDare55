@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6036533490048739014}
   - component: {fileID: 328187618705882489}
   - component: {fileID: 7176953916520468396}
+  - component: {fileID: 2099392921874108091}
   m_Layer: 0
   m_Name: DrawingLine
   m_TagString: Untagged
@@ -150,3 +151,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 0.05
+--- !u!64 &2099392921874108091
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391228319773179243}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
