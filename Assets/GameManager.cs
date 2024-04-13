@@ -5,6 +5,7 @@ using System;
 using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,18 +21,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject currentCustomer;
     [SerializeField] private Request currentRequest;
     [SerializeField] private int totalReqFulfilled;
+    [SerializeField] private int totalReqBotched;
     [SerializeField] private float totalMoney;
     [SerializeField] private int totalCustomers;
-    [SerializeField] private int day = 1;
-
+    [SerializeField] private DayCounter dayCounter;
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private TMP_Text endStats;
+    TypeWriterEffect typeWriterEffect;
     // Start is called before the first frame update
     void Start()
     {
-        
-        Debug.Log(day == 1);
-        switch (day)
+        typeWriterEffect = GetComponent<TypeWriterEffect>();
+        Debug.Log(dayCounter.currentDay == 1);
+        switch (dayCounter.currentDay)
         {
-            case 1: getTodaysCustomers(1, baseRequests.requests); Debug.Log("x"); 
+            case 1: getTodaysCustomers(2, baseRequests.requests); Debug.Log("x"); 
                 break;
             case 2: getTodaysCustomers(2, baseRequests.requests.Concat(additonalRequests1.requests).ToArray()); 
                 break;
@@ -55,23 +59,65 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        currentRequest = (Request) todaysCustomers[0,0];
-        GameObject currentCustomer = Instantiate(customerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        currentCustomer.GetComponent<Text>().text = currentRequest.requestText;
-        currentCustomer.GetComponent<SpriteRenderer>().sprite = (Sprite) todaysCustomers[0, 1];
+        StartCoroutine(waitForRequestFulfill());
+
     }
 
+   
+    IEnumerator waitForRequestFulfill()
+    {
+        for (int i = 0; i < todaysCustomers.GetLength(0); i++)
+        {
+            currentRequest = (Request)todaysCustomers[i, 0];
+            GameObject currentCustomer = Instantiate(customerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            currentCustomer.GetComponent<Text>().text = currentRequest.requestText;
+            currentCustomer.GetComponent<SpriteRenderer>().sprite = (Sprite)todaysCustomers[i, 1];
+
+            while (currentRequest.fulfilled == false)
+            {
+                yield return null;
+            }
+
+            totalCustomers++;
+
+            if (currentRequest.correctlyFulfilled)
+            {
+                totalReqFulfilled++;
+            }
+            else
+            {
+                totalReqBotched++;
+            }
+            Destroy(currentCustomer);
+            currentRequest.fulfilled = false;
+            currentRequest.correctlyFulfilled = false;
+            
+        }
+
+        dayCounter.currentDay++;
+        String dailyStats = "Summary" + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
+        endScreen.SetActive(true);
+        StartCoroutine(typeText(dailyStats, endStats));
+        
+
+    }
     public object[,] getTodaysCustomers(int numOfCustomers, Request[] requestList){
 
         todaysCustomers = new object[numOfCustomers,2];
 
-        for(int i = 0; i< numOfCustomers; i++)
+        for(int i = 0; i < numOfCustomers; i++)
         {
-            todaysCustomers[i,0] = requestList[UnityEngine.Random.Range(0, requestList.Length -1)];
+            todaysCustomers[i, 0] = requestList[UnityEngine.Random.Range(0, requestList.Length - 1)];
             todaysCustomers[i, 1] = allSprites.sprites[UnityEngine.Random.Range(0, allSprites.sprites.Length - 1)];
         }
         
         return todaysCustomers;
+    }
+
+    private IEnumerator typeText(string text, TMP_Text textLabel)
+    {
+        yield return typeWriterEffect.Run(text, textLabel);
+
     }
 
     // Update is called once per frame

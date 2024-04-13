@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 046cf3bc46f407a4bb1eb5476dcaea88
+guid: f4ce707adf8da3f4f9cf70c74bd1ff64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: customerSketch2_0
+      name: childCustomer_0
       rect:
         serializedVersion: 2
-        x: 2397
-        y: 575
-        width: 409
-        height: 688
+        x: 2391
+        y: 623
+        width: 391
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,29 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bba2280a2d23b946a223fb8171ad9bc
-      internalID: 165870349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: customerSketch2_1
-      rect:
-        serializedVersion: 2
-        x: 2895
-        y: 880
-        width: 12
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24ee44bea1223604cae5e57b043e59ea
-      internalID: 877271996
+      spriteID: 21880709de195f44c8923eaf32bd9314
+      internalID: 2098095304
       vertices: []
       indices: 
       edges: []
@@ -175,8 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      customerSketch2_0: 165870349
-      customerSketch2_1: 877271996
+      childCustomer_0: 2098095304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

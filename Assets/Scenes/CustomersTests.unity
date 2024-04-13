@@ -166,9 +166,10 @@ MonoBehaviour:
     correctlyFulfilled: 0
     correctRecipes: []
   totalReqFulfilled: 0
+  totalReqBotched: 0
   totalMoney: 0
   totalCustomers: 0
-  day: 1
+  dayCounter: {fileID: 11400000, guid: 5e65addc5359b794cb6a69336b9906cd, type: 2}
 --- !u!4 &275439319
 Transform:
   m_ObjectHideFlags: 0

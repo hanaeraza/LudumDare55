@@ -16,11 +16,13 @@ MonoBehaviour:
   - requestText: request 1
     fulfilled: 0
     correctlyFulfilled: 0
-    correctRecipes: []
+    correctRecipes:
+    - recipe 1
   - requestText: request 2
     fulfilled: 0
     correctlyFulfilled: 0
-    correctRecipes: []
+    correctRecipes:
+    - recipe 2
   - requestText: request 3
     fulfilled: 0
     correctlyFulfilled: 0

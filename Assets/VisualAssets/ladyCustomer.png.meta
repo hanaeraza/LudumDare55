@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 046cf3bc46f407a4bb1eb5476dcaea88
+guid: 92fe8a51a7649ba458a173bb5c951f24
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: customerSketch2_0
+      name: ladyCustomer_0
       rect:
         serializedVersion: 2
-        x: 2397
-        y: 575
-        width: 409
-        height: 688
+        x: 1203
+        y: 560
+        width: 572
+        height: 1100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,29 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bba2280a2d23b946a223fb8171ad9bc
-      internalID: 165870349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: customerSketch2_1
-      rect:
-        serializedVersion: 2
-        x: 2895
-        y: 880
-        width: 12
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24ee44bea1223604cae5e57b043e59ea
-      internalID: 877271996
+      spriteID: 7fb3a4d90e70e6a4fa33eed8f693b8ea
+      internalID: 155081391
       vertices: []
       indices: 
       edges: []
@@ -175,8 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      customerSketch2_0: 165870349
-      customerSketch2_1: 877271996
+      ladyCustomer_0: 155081391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
