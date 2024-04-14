@@ -19,6 +19,9 @@ public class summoningOrder : MonoBehaviour
         if (Requests.currentRequest.accepted)
         {
             orderDisplay.SetActive(true);
+        } else
+        {
+            orderDisplay.SetActive(false);
         }
     }
 }

@@ -43,3 +43,20 @@ MonoBehaviour:
     accepted: 0
     correctRecipes:
     - Imp
+  - requestText: "Can I tell you a secret? You\u2019re the first person I\u2019ve
+      talked to in 10 years. I\u2019m so lonely\u2026 I just want someone I can hang
+      out with."
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 0
+    correctRecipes:
+    - Imp
+    - Succubus
+    - Golem
+  - requestText: "I\u2019m so lonely. No human likes me, i need something else...
+      can you help out."
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 0
+    correctRecipes:
+    - Imp

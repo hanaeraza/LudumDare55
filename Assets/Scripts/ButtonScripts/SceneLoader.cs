@@ -27,7 +27,7 @@ public class SceneLoader : MonoBehaviour
     {
         if(CurrentScene.currentScene == mainSceneName)
         {
-            if(mainSceneButton != null)
+            if (mainSceneButton != null)
                 mainSceneButton.interactable = true;
             if (mainSceneUI != null) 
                 mainSceneUI.SetActive(true);
