@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StarPentagram: {fileID: 565616904}
+  messUps: 0
 --- !u!1 &19790632
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,8 +624,11 @@ GameObject:
   m_Component:
   - component: {fileID: 565616906}
   - component: {fileID: 565616905}
+  - component: {fileID: 565616907}
+  - component: {fileID: 565616908}
+  - component: {fileID: 565616909}
   m_Layer: 0
-  m_Name: StarPentagramCircle
+  m_Name: HeartPentagramCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,12 +678,35 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.5450602, y: 6.593831}
-      - {x: 0.029851854, y: 7.1753774}
-      - {x: 1.5330987, y: 2.8229957}
-      - {x: 2.7616916, y: 2.7434628}
-      - {x: 5.961644, y: 3.039655}
-      - {x: 4.6095805, y: 5.0810046}
+    - - {x: 2.7639809, y: 6.812752}
+      - {x: -0.35296535, y: 7.4972196}
+      - {x: -4.0508614, y: 6.31572}
+      - {x: -6.3025074, y: 3.786561}
+      - {x: -7.3056087, y: 0.07354617}
+      - {x: -5.171337, y: -4.7256613}
+      - {x: -2.8397846, y: -6.382472}
+      - {x: -0.27459717, y: -6.642708}
+      - {x: -2.1700058, y: -5.087657}
+      - {x: -5.19588, y: -2.1923096}
+      - {x: -5.990512, y: 3.1360724}
+      - {x: -4.4453354, y: 4.6569047}
+      - {x: -2.2541027, y: 5.107898}
+      - {x: -0.6461468, y: 3.9847503}
+      - {x: 0.060210228, y: 2.6505232}
+      - {x: 1.1995587, y: 4.4393845}
+      - {x: 2.9412909, y: 5.1295605}
+      - {x: 5.9972615, y: 3.4430513}
+      - {x: 6.182907, y: 0.24480295}
+      - {x: 5.4311423, y: -2.5260742}
+      - {x: 3.002448, y: -5.0088987}
+      - {x: -0.35553026, y: -6.684578}
+      - {x: 0.8174057, y: -6.48036}
+      - {x: 2.774767, y: -6.1395674}
+      - {x: 5.3295155, y: -4.375494}
+      - {x: 6.7431664, y: -1.6565778}
+      - {x: 6.97523, y: 1.1359076}
+      - {x: 6.335081, y: 3.4932737}
+      - {x: 4.937962, y: 5.3728986}
   m_UseDelaunayMesh: 0
 --- !u!4 &565616906
 Transform:
@@ -696,6 +723,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565616907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565616904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8907f4108a02ba499ed82c5fd53d65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 565616905}
+  collisionCounter: 0
+--- !u!50 &565616908
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565616904}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!60 &565616909
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565616904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.08908272, y: 1.3786049}
+      - {x: -2.6659136, y: 2.7142704}
+      - {x: -4.539195, y: 1.9353919}
+      - {x: -3.9180222, y: -1.2897379}
+      - {x: -2.8148713, y: -2.2120814}
+      - {x: 0.31702387, y: -4.8288555}
+      - {x: 3.91012, y: -1.9338684}
+      - {x: 4.7255964, y: 1.8415816}
+      - {x: 3.11133, y: 3.1374168}
+  m_UseDelaunayMesh: 0
 --- !u!1 &637880578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,6 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StarPentagram: {fileID: 565616904}
+  messUps: 0
 --- !u!4 &1863654244
 Transform:
   m_ObjectHideFlags: 0
