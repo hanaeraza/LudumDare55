@@ -24,7 +24,7 @@ public class acceptRequest : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        GetComponent<SpriteRenderer>().sortingLayerName = "Dialog";
     }
 
     // Update is called once per frame
@@ -35,21 +35,22 @@ public class acceptRequest : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GetComponent<SpriteRenderer>().sprite = mouseClicked;
         AcceptRequest();
     }
 
     private void OnMouseEnter()
     {
-
+        GetComponent<SpriteRenderer>().sprite = mouseOver;
     }
 
     private void OnMouseExit()
     {
-
+        GetComponent<SpriteRenderer>().sprite = regular;
     }
 
     private void OnMouseUpAsButton()
     {
-
+        GetComponent<SpriteRenderer>().sprite = regular;
     }
 }
