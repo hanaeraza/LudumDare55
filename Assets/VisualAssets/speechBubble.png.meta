@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4ce707adf8da3f4f9cf70c74bd1ff64
+guid: 0e855194495492e40afca5f2a42b82e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,22 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: childCustomer_0
+      name: speechBubble_0
       rect:
         serializedVersion: 2
-        x: 2391
-        y: 623
-        width: 391
-        height: 999
+        x: 1463
+        y: 890
+        width: 885
+        height: 478
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21880709de195f44c8923eaf32bd9314
-      internalID: 2098095304
+      spriteID: bb223086eda23914398af8d02a18fc16
+      internalID: -1344594172
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      childCustomer_0: 2098095304
+      speechBubble_0: -1344594172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

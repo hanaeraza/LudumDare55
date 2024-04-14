@@ -63,13 +63,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-   
+
     IEnumerator waitForRequestFulfill()
     {
         for (int i = 0; i < todaysCustomers.GetLength(0); i++)
         {
             currentRequest = (Request)todaysCustomers[i, 0];
             GameObject currentCustomer = Instantiate(customerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            currentCustomer.GetComponent<RectTransform>().localScale = Vector3.one;
             currentCustomer.GetComponent<Text>().text = currentRequest.requestText;
             currentCustomer.GetComponent<SpriteRenderer>().sprite = (Sprite)todaysCustomers[i, 1];
 
@@ -91,11 +92,11 @@ public class GameManager : MonoBehaviour
             Destroy(currentCustomer);
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
-            
+
         }
 
+        String dailyStats = "Summary" + "\n" + "Day " + dayCounter.currentDay + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
         dayCounter.currentDay++;
-        String dailyStats = "Summary" + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
         endScreen.SetActive(true);
         StartCoroutine(typeText(dailyStats, endStats));
         
