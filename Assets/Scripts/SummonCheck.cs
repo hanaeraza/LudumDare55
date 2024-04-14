@@ -21,6 +21,7 @@ public class SummonCheck : MonoBehaviour
         if (heartPentagram.isActiveAndEnabled && heartPentagram.collisionCounter > 0)
         {
             Debug.Log("Summoning failed");
+
         } else if (trianglePentagram.isActiveAndEnabled && trianglePentagram.collisionCounter > 0){
        
             Debug.Log("Summoning failed");
