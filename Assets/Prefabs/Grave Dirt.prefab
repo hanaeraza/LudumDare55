@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7129804591386497903
+--- !u!1 &2143324587088959762
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7751518792764169922}
-  - component: {fileID: 4453335148306034663}
-  - component: {fileID: 2541417130677638022}
-  - component: {fileID: 8780715244050352620}
-  - component: {fileID: 3938093042776692439}
+  - component: {fileID: 4937166122309581891}
+  - component: {fileID: 8971158316741965473}
+  - component: {fileID: 6044711748342736788}
+  - component: {fileID: 1351890289331096265}
+  - component: {fileID: 8990024896649986504}
   m_Layer: 0
-  m_Name: BloodyHeart
+  m_Name: Grave Dirt
   m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7751518792764169922
+--- !u!4 &4937166122309581891
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7129804591386497903}
+  m_GameObject: {fileID: 2143324587088959762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.3, y: -5.29, z: -0.11170526}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4453335148306034663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7129804591386497903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371747e08a6504943a92cc4f6b2a05aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &2541417130677638022
+--- !u!212 &8971158316741965473
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7129804591386497903}
+  m_GameObject: {fileID: 2143324587088959762}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,25 +75,37 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1530766943
   m_SortingLayer: 6
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 602d9554e82a6be41b0eb2156609f9dc, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b248c8263d8c8cc4c85de883294dc090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.83, y: 2.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8780715244050352620
+--- !u!114 &6044711748342736788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143324587088959762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371747e08a6504943a92cc4f6b2a05aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1351890289331096265
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7129804591386497903}
+  m_GameObject: {fileID: 2143324587088959762}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -133,15 +133,15 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!50 &3938093042776692439
+  m_Radius: 1.485
+--- !u!50 &8990024896649986504
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7129804591386497903}
+  m_GameObject: {fileID: 2143324587088959762}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
