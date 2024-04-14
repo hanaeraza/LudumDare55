@@ -57,20 +57,31 @@ public class SummonCheck : MonoBehaviour
                 break;
             case "Golem": idCurrentRecipe = 2;
                 break;
+            
         }
-
-        for(int i=0; i<4; i++)
+        if (idCurrentRecipe > 0)
         {
-            //Debug.Log(i);
-            if(snapOns[i]?.currentObject?.name == null && summonIngredients[idCurrentRecipe][i] != null){
-                Debug.Log("Summoning failed due to missing ingredients: "+ snapOns[i]?.currentObject?.name+ "!="+ summonIngredients[idCurrentRecipe][i]);
-                summonSuccess = false;
-            }
-            else if (snapOns[i]?.currentObject?.name != summonIngredients[idCurrentRecipe][i])
+
+
+            for (int i = 0; i < 4; i++)
             {
-                Debug.Log("Summoning failed due to wrong ingredients" + snapOns[i]?.currentObject?.name + "!=" + summonIngredients[idCurrentRecipe][i]);
-                summonSuccess = false;
+                //Debug.Log(i);
+                if (snapOns[i]?.currentObject?.name == null && summonIngredients[idCurrentRecipe][i] != null)
+                {
+                    Debug.Log("Summoning failed due to missing ingredients: " + snapOns[i]?.currentObject?.name + "!=" + summonIngredients[idCurrentRecipe][i]);
+                    summonSuccess = false;
+                }
+                else if (snapOns[i]?.currentObject?.name != summonIngredients[idCurrentRecipe][i])
+                {
+                    Debug.Log("Summoning failed due to wrong ingredients" + snapOns[i]?.currentObject?.name + "!=" + summonIngredients[idCurrentRecipe][i]);
+                    summonSuccess = false;
+                }
             }
+        }
+        else
+        {
+            summonSuccess = false;
+            Debug.Log("No summoning recipe was selected");
         }
         if (summonSuccess)
         {
@@ -78,6 +89,7 @@ public class SummonCheck : MonoBehaviour
         }
         else
         {
+
             explosion.SetActive(true);
         }
 
