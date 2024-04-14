@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
             //Destroy(currentCustomer);
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
+            yield return new WaitForSeconds(2); 
 
         }
 
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < numOfCustomers; i++)
         {
             todaysCustomers[i, 0] = requestList[UnityEngine.Random.Range(0, requestList.Length - 1)];
-            todaysCustomers[i, 1] = allSprites.sprites[UnityEngine.Random.Range(0, allSprites.sprites.Length - 1)];
+            todaysCustomers[i, 1] = allSprites.sprites[UnityEngine.Random.Range(0, allSprites.sprites.Length)];
         }
         
         return todaysCustomers;
@@ -129,8 +130,4 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private IEnumerator wait(int seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-    }
 }
