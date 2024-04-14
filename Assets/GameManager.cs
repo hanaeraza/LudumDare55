@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(2);
         }
 
-        String dailyStats = "Summary" + "\n" + "Day " + dayCounter.currentDay + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
+        String dailyStats = "Day: " + dayCounter.currentDay + "\n" + "Total Customers: " + totalCustomers + "\n" + "Total Fulfilled Orders: " + totalReqFulfilled + "\n" + "Total Botched Orders: " + totalReqBotched;
         dayCounter.currentDay++;
         endScreen.SetActive(true);
         StartCoroutine(typeText(dailyStats, endStats));
