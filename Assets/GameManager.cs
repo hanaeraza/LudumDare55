@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
             //Destroy(currentCustomer);
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
+            currentRequest.accepted = false;
             yield return new WaitForSeconds(2); 
 
             yield return new WaitForSeconds(2);

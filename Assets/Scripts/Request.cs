@@ -9,6 +9,7 @@ public class Request
     [SerializeField] public string requestText;
     [SerializeField] public bool fulfilled = false;
     [SerializeField] public bool correctlyFulfilled = false;
+    [SerializeField] public bool accepted = false;
     [SerializeField] public string[] correctRecipes;
     // Start is called before the first frame update
 
