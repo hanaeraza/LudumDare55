@@ -8959,6 +8959,9 @@ MonoBehaviour:
   summonSuccess: 0
   explosion: {fileID: 174487386}
   particles: {fileID: 7937338753336838926, guid: 0055fc9bc32813c43b240ac797a7ef61, type: 3}
+  golem: {fileID: 21300000, guid: 13f37a808526e5b46966124c586db17a, type: 3}
+  imp: {fileID: 21300000, guid: 62c408800f792824d9aed3b7865fb2bd, type: 3}
+  succubus: {fileID: 21300000, guid: 1cc269a43b0bc784c9bbf1229b74178b, type: 3}
 --- !u!1 &1930614569
 GameObject:
   m_ObjectHideFlags: 0
