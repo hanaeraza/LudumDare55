@@ -10,6 +10,5 @@ public class Requests : ScriptableObject
 
     [SerializeField]
     public static Request currentRequest;
-    [SerializeField]
-    public  Request currentRequest1;
+   
 }
