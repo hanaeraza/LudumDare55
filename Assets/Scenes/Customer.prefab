@@ -279,6 +279,7 @@ MonoBehaviour:
   customerSprite: {fileID: 1423851590649124142}
   aPos: {x: 0, y: 0, z: 0}
   atCounterPosition: -7
+  exitPosition: -14
   dialogBox: {fileID: 4065803361205257547}
   requestText: {fileID: 547454958964053309}
   walkFreq: 6

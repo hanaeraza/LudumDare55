@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < todaysCustomers.GetLength(0); i++)
         {
             currentRequest = (Request)todaysCustomers[i, 0];
+            Requests.currentRequest = (Request)todaysCustomers[i, 0];
             GameObject currentCustomer = Instantiate(customerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             currentCustomer.GetComponent<RectTransform>().localScale = Vector3.one;
             currentCustomer.GetComponent<Text>().text = currentRequest.requestText;
@@ -89,7 +90,8 @@ public class GameManager : MonoBehaviour
             {
                 totalReqBotched++;
             }
-            Destroy(currentCustomer);
+            
+            //Destroy(currentCustomer);
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
 
@@ -125,5 +127,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private IEnumerator wait(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }
