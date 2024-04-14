@@ -2366,7 +2366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chekout
+  m_text: Checkout
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b9c00aa0fa1971a46aeaff1eb97c5825, type: 2}
   m_sharedMaterial: {fileID: -2084566659431547371, guid: b9c00aa0fa1971a46aeaff1eb97c5825, type: 2}
