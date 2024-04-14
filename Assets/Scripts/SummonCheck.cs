@@ -17,6 +17,7 @@ public class SummonCheck : MonoBehaviour
 
     [SerializeField] bool summonSuccess;
     [SerializeField] GameObject explosion;
+    [SerializeField] ParticleSystem particles;
 
     string[][] summonIngredients = { new string[] { "Scorpion Tail(Clone)", "Devil's Horn(Clone)", null, null }, new string[] { "Bloody Heart(Clone)", "Rose Petals(Clone)", null, null }, new string[] { "Grave Dirt(Clone)", "Mandrake Root(Clone)", null, null } };
 
@@ -82,15 +83,20 @@ public class SummonCheck : MonoBehaviour
         {
             summonSuccess = false;
             Debug.Log("No summoning recipe was selected");
+
         }
         if (summonSuccess)
         {
             Debug.Log("Summoning Succeeded!");
+            Instantiate(particles);
+            recipe.succeded = true;
+            recipe.isCompleted = true;
         }
         else
         {
-
             explosion.SetActive(true);
+            recipe.isCompleted = true;
+            recipe.succeded = false;
         }
 
     }
