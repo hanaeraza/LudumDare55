@@ -46,8 +46,8 @@ public class SceneLoader : MonoBehaviour
 
     public void mainSceneActivate()
     {
-        mainSceneUI?.SetActive(true);
-        GameObject[] rootObjs = secondaryScene.GetRootGameObjects();
+        GameObject[] rootObjs = SceneManager.GetSceneByName(secondarySceneName).GetRootGameObjects();
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainSceneName));
         foreach (GameObject obj in rootObjs)
             obj.SetActive(false);
 
@@ -59,6 +59,7 @@ public class SceneLoader : MonoBehaviour
         mainSceneButton.interactable = false;
         mainSceneUI?.SetActive(false);
         GameObject[] rootObjs = SceneManager.GetSceneByName(secondarySceneName).GetRootGameObjects();
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(secondarySceneName));
         foreach (GameObject obj in rootObjs)
             obj.SetActive(true);
 

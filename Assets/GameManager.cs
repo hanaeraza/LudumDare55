@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SceneManager.LoadScene("Drawing", LoadSceneMode.Additive); 
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         Debug.Log(dayCounter.currentDay == 1);
         switch (dayCounter.currentDay)
