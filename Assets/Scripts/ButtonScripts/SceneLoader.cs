@@ -61,7 +61,13 @@ public class SceneLoader : MonoBehaviour
         GameObject[] rootObjs = SceneManager.GetSceneByName(secondarySceneName).GetRootGameObjects();
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(secondarySceneName));
         foreach (GameObject obj in rootObjs)
-            obj.SetActive(true);
+        {
+            if(obj.tag != "disabled")
+            {
+                obj.SetActive(true);
+            }
+        }
+            
 
         CurrentScene.currentScene = secondarySceneName;
     }

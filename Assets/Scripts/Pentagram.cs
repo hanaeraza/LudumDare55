@@ -21,8 +21,12 @@ public class Pentagram : MonoBehaviour
   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision detected!");
-        collisionCounter++;
+        if (collision.gameObject.CompareTag("line") )
+        {
+            Debug.Log("collision detected!");
+            collisionCounter++;
+        }
+        
     }
     
 }

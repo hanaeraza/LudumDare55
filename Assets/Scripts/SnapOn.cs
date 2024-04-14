@@ -7,11 +7,12 @@ public class SnapOn : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] bool isEmpty;
-    [SerializeField] GameObject currentObject;
+    [SerializeField] public GameObject currentObject;
     [SerializeField] GameObject newObject;
     void Start()
     {
         isEmpty = true;
+        currentObject = null;
     }
 
     // Update is called once per frame
