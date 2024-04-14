@@ -10,7 +10,7 @@ public class Instantiator : MonoBehaviour
     public GameObject devilsHornPrefab;
     public GameObject graveDirtPrefab;
     public GameObject mandrakeRootPrefab;
-    public GameObject cirlce;
+    
 
     public void InstantiateBloodyHeart()
     {
