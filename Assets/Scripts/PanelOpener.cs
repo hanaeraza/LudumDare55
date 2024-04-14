@@ -21,9 +21,9 @@ public class PanelOpener : MonoBehaviour
                 animator.SetBool("open", !isOpen);
 
                 if (isOpen)
-                    buttonText.text = ">";
+                    buttonText.text = "<";
                 else
-                    buttonText.text = "<"; 
+                    buttonText.text = ">"; 
             }
         }
     }
