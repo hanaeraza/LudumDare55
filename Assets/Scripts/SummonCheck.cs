@@ -59,7 +59,7 @@ public class SummonCheck : MonoBehaviour
                 break;
             
         }
-        if (idCurrentRecipe > 0)
+        if (idCurrentRecipe >= 0)
         {
 
 
