@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SceneManager.LoadScene("Drawing", LoadSceneMode.Additive); 
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         Debug.Log(dayCounter.currentDay == 1);
         switch (dayCounter.currentDay)
@@ -94,12 +96,13 @@ public class GameManager : MonoBehaviour
             //Destroy(currentCustomer);
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
+            currentRequest.accepted = false;
             yield return new WaitForSeconds(2); 
 
             yield return new WaitForSeconds(2);
         }
 
-        String dailyStats = "Summary" + "\n" + "Day " + dayCounter.currentDay + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
+        String dailyStats = "Day: " + dayCounter.currentDay + "\n" + "Total Customers: " + totalCustomers + "\n" + "Total Fulfilled Orders: " + totalReqFulfilled + "\n" + "Total Botched Orders: " + totalReqBotched;
         dayCounter.currentDay++;
         endScreen.SetActive(true);
         StartCoroutine(typeText(dailyStats, endStats));

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915313c673775a54c9ef324487f92631, type: 3}
+  m_Name: baseRequests
+  m_EditorClassIdentifier: 
+  requests:
+  - requestText: "My buddy has been pranking me for weeks and it\u2019s about time
+      I got even. He\u2019ll never expect me to summon someone to prank him for me!
+      Can you summon me a prankster partner-in-crime?"
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 0
+    correctRecipes:
+    - Imp
+  - requestText: "I\u2019ve got a terrible crush on someone, but they don\u2019t
+      even know I exist! I really need some good love advice\u2026 You\u2019ve got
+      someone you could call, right?"
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 1
+    correctRecipes:
+    - Succubus
+  - requestText: "... There\u2019s no one behind me, right? I swear, I\u2019m being
+      followed! I don\u2019t know who else to turn to\u2026 I really need a bodyguard
+      to keep me safe and scare away my stalker."
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 0
+    correctRecipes:
+    - Golem
+  - requestText: I need a partner in crime to do pranks
+    fulfilled: 0
+    correctlyFulfilled: 0
+    accepted: 0
+    correctRecipes:
+    - Imp
