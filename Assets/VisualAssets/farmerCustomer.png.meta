@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2688a49abd0742142b91d5ed5b54f846
+guid: bbedb498233cbe941bbee55e01b9b79e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: emoCustomer_0
+      name: farmerCustomer_0
       rect:
         serializedVersion: 2
-        x: 937
+        x: 910
         y: 575
-        width: 407
-        height: 1063
+        width: 728
+        height: 1083
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,29 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e64b5f3817e3de48844dec292931011
-      internalID: -2065518806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoCustomer_1
-      rect:
-        serializedVersion: 2
-        x: 1345
-        y: 603
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65d4995b493791543b41ec013b479c9e
-      internalID: 69768974
+      spriteID: 166f2f1cd69a8e64c9be4f390334972c
+      internalID: 1292663004
       vertices: []
       indices: 
       edges: []
@@ -175,8 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      emoCustomer_0: -2065518806
-      emoCustomer_1: 69768974
+      farmerCustomer_0: 1292663004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
