@@ -45,10 +45,13 @@ public class fullfillOrder : MonoBehaviour
 
             if (!currentRecipe.succeded)
             {
-
+                Requests.currentRequest.correctlyFulfilled = false;
+                Requests.currentRequest.fulfilled = true;
+                currentRecipe.isCompleted = false;
+                currentRecipe.succeded = false;
 
             } else if(correctRecipe ) {
-
+                Requests.currentRequest.correctlyFulfilled = true;
                 Requests.currentRequest.fulfilled = true;
                 currentRecipe.isCompleted = false;
                 currentRecipe.succeded = false;

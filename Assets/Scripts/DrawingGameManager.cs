@@ -5,10 +5,13 @@ using UnityEngine;
 public class DrawingGameManager : MonoBehaviour
 {
     [SerializeField] GameObject line;
+    [SerializeField] GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
         enabled = false;
+        explosion.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,6 +19,7 @@ public class DrawingGameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            explosion.SetActive(false);
             Instantiate(line);
         }
       

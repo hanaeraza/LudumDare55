@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 174487388}
   m_Layer: 0
   m_Name: explosion
-  m_TagString: Untagged
+  m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5629,6 +5629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 8391228319773179243, guid: 2e56b40ad33aee247b564e57d9061245, type: 3}
+  explosion: {fileID: 174487386}
 --- !u!4 &936353997
 Transform:
   m_ObjectHideFlags: 0
@@ -6871,6 +6872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line: {fileID: 0}
   ingredient: {fileID: 0}
+  exp: {fileID: 174487386}
 --- !u!1 &1328673992
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ public class StartOver : MonoBehaviour
 {
     public GameObject line;
     public GameObject ingredient;
-   public void clear()
+    public GameObject exp;
+    public void clear()
     {
         GameObject[] rootObjs = SceneManager.GetSceneByName("Drawing").GetRootGameObjects();
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Drawing"));
@@ -18,5 +19,7 @@ public class StartOver : MonoBehaviour
                 Destroy(obj);
             }
         }
+
+        exp.SetActive(false);
     }
 }
