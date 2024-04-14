@@ -11,9 +11,9 @@ public class acceptRequest : MonoBehaviour
    
     public void AcceptRequest()
     {
-        //upperText.text = dialogText.text;
         Requests.currentRequest.accepted = true;
-        speechBubble.SetActive(false);
+        if(speechBubble != null )
+          speechBubble.SetActive(false);
     }
 
     [SerializeField] public Sprite regular;
