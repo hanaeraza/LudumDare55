@@ -6768,6 +6768,7 @@ MonoBehaviour:
   sceneName: customersTests
   mainSceneName: customersTests
   secondarySceneName: Drawing
+  mainSceneButton: {fileID: 0}
   mainSceneUI: {fileID: 0}
   secondarySceneUI: {fileID: 78265482}
   secondaryScene:
@@ -6818,7 +6819,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1804205687}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: unLoadScene
+        m_MethodName: mainSceneActivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
