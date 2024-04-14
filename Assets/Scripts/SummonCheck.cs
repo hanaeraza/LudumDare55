@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class SummonCheck : MonoBehaviour
 {
-    [SerializeField] GameObject heartPentagram;
+    [SerializeField] Pentagram heartPentagram;
     [SerializeField] int messUps=0;
     [SerializeField] int collisionCount;
 
     private void Start()
     {
-        heartPentagram=GetComponent<GameObject>();
+        
 
     }
     public void checkSummon()
     {
         Debug.Log("start check");
-       
+        if (heartPentagram.collisionCounter > 0)
+        {
+            Debug.Log("Summoning failed");
+        }
         
     }
 }
