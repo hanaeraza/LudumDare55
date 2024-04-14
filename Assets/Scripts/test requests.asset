@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915313c673775a54c9ef324487f92631, type: 3}
+  m_Name: test requests
+  m_EditorClassIdentifier: 
+  requests:
+  - requestText: request 1
+    fulfilled: 0
+    correctlyFulfilled: 0
+    correctRecipes:
+    - recipe 1
+  - requestText: request 2
+    fulfilled: 0
+    correctlyFulfilled: 0
+    correctRecipes:
+    - recipe 2
+  - requestText: request 3
+    fulfilled: 0
+    correctlyFulfilled: 0
+    correctRecipes: []
+  - requestText: "I hate my neighbour, he\u2019s kind of annoying\u2026 I\u2019m
+      not opposed to murder"
+    fulfilled: 0
+    correctlyFulfilled: 0
+    correctRecipes: []
