@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     public AudioSource backgroundMusic;
     public AudioSource backgroundAmbience;
+    public AudioSource pageTurn;
+    public AudioSource summonVwoop; 
 
     private void Awake()
     {

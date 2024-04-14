@@ -37,14 +37,18 @@ public class RecipeLookup : MonoBehaviour
         }
 
         RecipeList.SetActive(false);
-        RecipePage.SetActive(true); 
+        RecipePage.SetActive(true);
+
+        AudioManager.Instance.pageTurn.Play(); 
 
     }
 
     public void GoBack() {
         RecipePage.SetActive(false);
         RecipeList.SetActive(true);
-        
+
+        AudioManager.Instance.pageTurn.Play();
+
     }
 
 }

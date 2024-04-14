@@ -20,6 +20,8 @@ public class PanelOpener : MonoBehaviour
 
                 animator.SetBool("open", !isOpen);
 
+                AudioManager.Instance.pageTurn.Play(); 
+
                 if (isOpen)
                     buttonText.text = "<";
                 else
