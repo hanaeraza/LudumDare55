@@ -8,6 +8,7 @@ public class Instantiator : MonoBehaviour
 
     public void InstantiateBloodyHeart()
     {
+        Debug.Log("Bloody Heart instantiated");
         Instantiate(bloodyHeartPrefab);
     }
 }
