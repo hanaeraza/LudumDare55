@@ -19,8 +19,8 @@ public class RecipeLookup : MonoBehaviour
         string[] summonDesc = {"A naughty little devil with a penchant for mischief", "A seductive she-demon that deals in love and companionship", "An earthen construct that's happy to guard and protect"}; 
         
         
-        string[][] summonIngredients = { new string[] {"Scorpion Tail", "Devil's Horn"}, new string[] {"Bloody Heart", "Rose Petals"}, new string[] {"Grave Dirt", "Mandrake Root"}}; 
-        
+        string[][] summonIngredients = { new string[] {"Scorpion Tail", "Devil's Horn"}, new string[] {"Bloody Heart", "Rose Petals"}, new string[] {"Grave Dirt", "Mandrake Root"}};
+        string[] position = { "North", "East", "West", "South" };
         
         summonTitle.text = summonType[index]; 
         summonDescription.text = summonDesc[index]; 
@@ -31,7 +31,7 @@ public class RecipeLookup : MonoBehaviour
 
         for (int i = 0; i < ingredientsNum; i++) {
             
-            ingredients[i].GetComponent<TMP_Text>().text = summonIngredients[index][i];
+            ingredients[i].GetComponent<TMP_Text>().text = position[i] + " - " + summonIngredients[index][i];
             ingredients[i].SetActive(true); 
 
         }
