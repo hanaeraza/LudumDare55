@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 372d6b53e5273d0448f32072564610fa
+guid: 5de13dc964143254ca3070363ba47788
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,64 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pinkCustomer_0
+      name: accpetButtonDown_0
       rect:
         serializedVersion: 2
-        x: 860
-        y: 603
-        width: 654
-        height: 1044
+        x: 2172
+        y: 1085
+        width: 296
+        height: 123
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d348ff1719e8c94ba73345d89ea698c
-      internalID: 590909424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinkCustomer_1
-      rect:
-        serializedVersion: 2
-        x: 1323
-        y: 584
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30866853ef6cf6349976dd93cdaab45b
-      internalID: 741853744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinkCustomer_2
-      rect:
-        serializedVersion: 2
-        x: 1361
-        y: 579
-        width: 6
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c59597e991958224cb8875a1598aea3d
-      internalID: -701425988
+      spriteID: bfb41833998f9ce45b1bce48a54d0277
+      internalID: 2094185413
       vertices: []
       indices: 
       edges: []
@@ -196,9 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pinkCustomer_0: 590909424
-      pinkCustomer_1: 741853744
-      pinkCustomer_2: -701425988
+      accpetButtonDown_0: 2094185413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
