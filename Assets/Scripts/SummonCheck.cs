@@ -19,10 +19,15 @@ public class SummonCheck : MonoBehaviour
     [SerializeField] GameObject explosion;
     [SerializeField] ParticleSystem particles;
 
-    string[][] summonIngredients = { new string[] { "Scorpion Tail(Clone)", "Devil's Horn(Clone)", null, null }, new string[] { "Bloody Heart(Clone)", "Rose Petals(Clone)", null, null }, new string[] { "Grave Dirt(Clone)", "Mandrake Root(Clone)", null, null } };
+    [SerializeField] Sprite golem;
+    [SerializeField] Sprite imp;
+    [SerializeField] Sprite succubus;
 
+    string[][] summonIngredients = { new string[] { "Scorpion Tail(Clone)", "Devil's Horn(Clone)", null, null }, new string[] { "Bloody Heart(Clone)", "Rose Petals(Clone)", null, null }, new string[] { "Grave Dirt(Clone)", "Mandrake Root(Clone)", null, null } };
+    Sprite[] demons = { };
     private void Start()
     {
+        demons = new Sprite[] { imp, succubus, golem};
         summonSuccess = true;
         explosion.SetActive(false);
 
@@ -89,8 +94,10 @@ public class SummonCheck : MonoBehaviour
         {
             Debug.Log("Summoning Succeeded!");
             Instantiate(particles);
+            Instantiate(demons[idCurrentRecipe]);
             recipe.succeded = true;
             recipe.isCompleted = true;
+            
         }
         else
         {
