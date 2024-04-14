@@ -8148,7 +8148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8767416786494187607, guid: 36b01a9ff4516a6428dd2c2a0706909b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064666512566786602, guid: 36b01a9ff4516a6428dd2c2a0706909b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -8931,6 +8931,7 @@ MonoBehaviour:
   snapOn4: {fileID: 1788460813}
   summonSuccess: 0
   explosion: {fileID: 174487386}
+  particles: {fileID: 7937338753336838926, guid: 0055fc9bc32813c43b240ac797a7ef61, type: 3}
 --- !u!1 &1930614569
 GameObject:
   m_ObjectHideFlags: 0
