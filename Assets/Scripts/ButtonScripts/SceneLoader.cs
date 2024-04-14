@@ -15,6 +15,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] GameObject mainSceneUI;
     [SerializeField] GameObject secondarySceneUI;
     [SerializeField] Scene secondaryScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,8 @@ public class SceneLoader : MonoBehaviour
             obj.SetActive(false);
 
         CurrentScene.currentScene = mainSceneName;
+        AudioManager.Instance.PlayFrontMusic(); 
+
     }
 
     public void secondarySceneActivate()
@@ -64,6 +67,7 @@ public class SceneLoader : MonoBehaviour
             obj.SetActive(true);
 
         CurrentScene.currentScene = secondarySceneName;
+        AudioManager.Instance.PlayBackMusic(); 
     }
 
     public void loadASceneOntop()

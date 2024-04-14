@@ -4,33 +4,35 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource backgroundAudio;
-    public AudioSource backgroundAmbient; 
-    public AudioSource SFX; 
+    public static AudioManager Instance;
+    public AudioSource backgroundMusic;
+    public AudioSource backgroundAmbience;
 
-    public AudioClip backgroundMusic;
-    public AudioClip doorOpen;
-    public AudioClip summon;
-    public AudioClip pageTurn;
-    public AudioClip doorChime; 
-
-   
-    public void playSFX(AudioClip clip)
+    private void Awake()
     {
-        SFX.clip = clip;
-        SFX.Play(); 
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    public void PlayBackMusic()
+    {
+        backgroundMusic.pitch = 0.8f;
+        backgroundMusic.panStereo = -0.7f;
+        backgroundMusic.volume = 0.1f;
+        backgroundAmbience.Play();
     }
 
-    public void playFrontroomMusic()
+    public void PlayFrontMusic()
     {
-        backgroundAudio.pitch = 1f;
-        backgroundAmbient.Stop(); 
-    }
-
-    public void playBackroomMusic()
-    {
-        backgroundAudio.pitch = 0.8f;
-        backgroundAmbient.Play(); 
+        backgroundMusic.pitch = 1f;
+        backgroundMusic.panStereo = 0f;
+        backgroundMusic.volume = 0.25f;
+        backgroundAmbience.Stop();
     }
 
 }
