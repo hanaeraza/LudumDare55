@@ -2997,8 +2997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPentagram: {fileID: 178729074}
-  squarePentagram: {fileID: 0}
-  trianglePentagram: {fileID: 0}
+  squarePentagram: {fileID: 958454825}
+  trianglePentagram: {fileID: 1523765735}
   messUps: 0
   collisionCount: 0
 --- !u!4 &857165125
@@ -3021,6 +3021,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4689832958825295597, guid: 441daac4eef814743aeeb47271af5677, type: 3}
   m_PrefabInstance: {fileID: 4480799014616005454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &958454825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6545498890988155066, guid: 441daac4eef814743aeeb47271af5677, type: 3}
+  m_PrefabInstance: {fileID: 4480799014616005454}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958454823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8907f4108a02ba499ed82c5fd53d65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995187172
 GameObject:
   m_ObjectHideFlags: 0
@@ -5919,6 +5930,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8767416786494187607, guid: 36b01a9ff4516a6428dd2c2a0706909b, type: 3}
   m_PrefabInstance: {fileID: 683209663253943332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1523765735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 713578766991655552, guid: 36b01a9ff4516a6428dd2c2a0706909b, type: 3}
+  m_PrefabInstance: {fileID: 683209663253943332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523765733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8907f4108a02ba499ed82c5fd53d65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1531721525
 GameObject:
   m_ObjectHideFlags: 0
