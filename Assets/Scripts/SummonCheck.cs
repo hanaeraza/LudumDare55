@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SummonCheck : MonoBehaviour
 {
-    [SerializeField] GameObject StarPentagram;
+    [SerializeField] GameObject heartPentagram;
     [SerializeField] int messUps=0;
+    [SerializeField] int collisionCount;
+
+    private void Start()
+    {
+        heartPentagram=GetComponent<GameObject>();
+
+    }
     public void checkSummon()
     {
         Debug.Log("start check");
-        Collider[] colliders = StarPentagram.GetComponentsInChildren<Collider>();
-        for(int i = 0; i < colliders.Length; i++)
-        {
-            
-        }
+       
+        
     }
 }
