@@ -26,7 +26,7 @@ MonoBehaviour:
       someone you could call, right?"
     fulfilled: 0
     correctlyFulfilled: 0
-    accepted: 1
+    accepted: 0
     correctRecipes:
     - Succubus
   - requestText: "... There\u2019s no one behind me, right? I swear, I\u2019m being
