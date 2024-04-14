@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
             currentRequest.fulfilled = false;
             currentRequest.correctlyFulfilled = false;
 
+            yield return new WaitForSeconds(2);
         }
 
         String dailyStats = "Summary" + "\n" + "Day " + dayCounter.currentDay + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
@@ -129,8 +130,4 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private IEnumerator wait(int seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-    }
 }
