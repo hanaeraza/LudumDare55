@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
             currentRequest.correctlyFulfilled = false;
             yield return new WaitForSeconds(2); 
 
+            yield return new WaitForSeconds(2);
         }
 
         String dailyStats = "Summary" + "\n" + "Day " + dayCounter.currentDay + "\n" + "Total fulfilled orders: " + totalReqFulfilled + "\n" + "Total customers: " + totalCustomers + "\n" + "Total botched orders: " + totalReqBotched;
