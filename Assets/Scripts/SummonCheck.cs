@@ -61,7 +61,7 @@ public class SummonCheck : MonoBehaviour
 
         for(int i=0; i<4; i++)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
             if(snapOns[i]?.currentObject?.name == null && summonIngredients[idCurrentRecipe][i] != null){
                 Debug.Log("Summoning failed due to missing ingredients: "+ snapOns[i]?.currentObject?.name+ "!="+ summonIngredients[idCurrentRecipe][i]);
                 summonSuccess = false;
