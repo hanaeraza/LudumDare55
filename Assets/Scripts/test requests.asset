@@ -32,3 +32,8 @@ MonoBehaviour:
     fulfilled: 0
     correctlyFulfilled: 0
     correctRecipes: []
+  currentRequest1:
+    requestText: 
+    fulfilled: 0
+    correctlyFulfilled: 0
+    correctRecipes: []
