@@ -49,4 +49,9 @@ TagManager:
     locked: 0
   - name: Counter
     uniqueID: 4089876007
+  - name: Background
+    uniqueID: 3627691591
+    locked: 0
+  - name: Foreground
+    uniqueID: 2764200353
     locked: 0

@@ -7,12 +7,15 @@ public class DrawingWithMouse : MonoBehaviour
    private LineRenderer lineRenderer;
    private Vector3 previousPosition;
     public float minDistance;
-
+    //private MeshCollider meshCollider;
+    EdgeCollider2D edgeCollider;
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        edgeCollider = GetComponent<EdgeCollider2D>();
         lineRenderer.positionCount = 1;
         previousPosition = transform.position;
+        //meshCollider = GetComponent<MeshCollider>();
     }
 
     private void Update()
@@ -39,10 +42,26 @@ public class DrawingWithMouse : MonoBehaviour
                 previousPosition = currentPosition;
             }
         }
+        SetEdgeCollider(lineRenderer);
         if(Input.GetMouseButtonUp(0))
         {
             enabled = false;
+            //Mesh mesh = new Mesh();
+            //lineRenderer.BakeMesh(mesh, true);
+            //meshCollider.sharedMesh = mesh;
+            
         }
 
+    }
+
+    void SetEdgeCollider(LineRenderer lineRenderer)
+    {
+        List<Vector2> edges = new List<Vector2>();
+        for(int point=0; point<lineRenderer.positionCount; point++)
+        {
+            Vector3 lineRendererPoint=lineRenderer.GetPosition(point);
+            edges.Add(new Vector2(lineRendererPoint.x, lineRendererPoint.y));
+        }
+        edgeCollider.SetPoints(edges);
     }
 }
