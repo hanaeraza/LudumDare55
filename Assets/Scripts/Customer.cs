@@ -16,7 +16,8 @@ public class Customer : MonoBehaviour
     private bool isWaiting = true;
     [SerializeField] float walkFreq;
     [SerializeField] float walkAmp;
-    private bool goBack = false;
+    private bool goBack = false; 
+
     // Start is called before the first frame update
     void Start()
     {
