@@ -27,7 +27,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int totalCustomers;
     [SerializeField] private DayCounter dayCounter;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject finalScreen;
     [SerializeField] private TMP_Text endStats;
+    [SerializeField] private TMP_Text finalStatsText;
+    [SerializeField] private TotalStats finalStats;
     TypeWriterEffect typeWriterEffect;
     // Start is called before the first frame update
     void Start()
@@ -61,8 +64,16 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        StartCoroutine(waitForRequestFulfill());
-
+        if (dayCounter.currentDay < 5)
+        {
+            StartCoroutine(waitForRequestFulfill());
+        }
+        else
+        {
+            String dailyStats = "Score\n" + "Total Customers: " + finalStats.totalCustomers + "\n" + "Total Fulfilled Orders: " + finalStats.totalSuccessOrders + "\n" + "Total Botched Orders: " + finalStats.totalBotchedOrders;
+            finalScreen.SetActive(true);
+            StartCoroutine(typeText(dailyStats, finalStatsText));
+        }
     }
 
 
@@ -83,14 +94,17 @@ public class GameManager : MonoBehaviour
             }
 
             totalCustomers++;
+            finalStats.totalCustomers++;
 
             if (currentRequest.correctlyFulfilled)
             {
                 totalReqFulfilled++;
+                finalStats.totalSuccessOrders++;
             }
             else
             {
                 totalReqBotched++;
+                finalStats.totalBotchedOrders++;
             }
             
             //Destroy(currentCustomer);

@@ -21,5 +21,6 @@ public class StartOver : MonoBehaviour
         }
 
         exp.SetActive(false);
+        CollisionCounter.currentCollisionCount = 0;
     }
 }

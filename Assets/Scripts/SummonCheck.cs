@@ -23,31 +23,36 @@ public class SummonCheck : MonoBehaviour
     [SerializeField] Sprite imp;
     [SerializeField] Sprite succubus;
 
-    string[][] summonIngredients = { new string[] { "Scorpion Tail(Clone)", "Devil's Horn(Clone)", null, null }, new string[] { "Bloody Heart(Clone)", "Rose Petals(Clone)", null, null }, new string[] { "Grave Dirt(Clone)", "Mandrake Root(Clone)", null, null } };
+    string[][] summonIngredients = { new string[] { "Scorpion Tail(Clone)", "Devil's Horn(Clone)", null, null }, new string[] { "Bloody Heart(Clone)", "Rose Petals(Clone)", null, null }, new string[] { "Mandrake Root(Clone)", "Grave Dirt(Clone)", null, null } };
     Sprite[] demons = { };
     private void Start()
     {
         demons = new Sprite[] { imp, succubus, golem};
         summonSuccess = true;
         explosion.SetActive(false);
+        
+    }
 
+    private void Update()
+    {
+        Debug.Log("collision" + CollisionCounter.currentCollisionCount);
     }
     public void checkSummon()
     {
         SnapOn[] snapOns = {snapOn1, snapOn2, snapOn3, snapOn4 };
         Debug.Log("start check");
-        if (heartPentagram.isActiveAndEnabled && heartPentagram.collisionCounter > 0)
+        if (heartPentagram.isActiveAndEnabled && CollisionCounter.currentCollisionCount > 0)
         {
             Debug.Log("Summoning failed");
             summonSuccess = false;
 
-        } else if (trianglePentagram.isActiveAndEnabled && trianglePentagram.collisionCounter > 0){
+        } else if (trianglePentagram.isActiveAndEnabled && CollisionCounter.currentCollisionCount > 0){
        
             Debug.Log("Summoning failed");
             summonSuccess = false;
 
         }
-        else if(squarePentagram.isActiveAndEnabled && squarePentagram.collisionCounter > 0)
+        else if(squarePentagram.isActiveAndEnabled && CollisionCounter.currentCollisionCount > 0)
         {
             Debug.Log("Summoning failed");
             summonSuccess = false;

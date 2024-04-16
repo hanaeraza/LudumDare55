@@ -25,8 +25,9 @@ public class Pentagram : MonoBehaviour
         {
             Debug.Log("collision detected!");
             collisionCounter++;
+            CollisionCounter.currentCollisionCount++;
         }
         
     }
-    
+
 }
