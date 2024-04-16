@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def33f9aa4669fd47a943698efcb6426, type: 3}
   m_Name: CurrentRecipe
   m_EditorClassIdentifier: 
-  currentRecipe: Succubus
+  currentRecipe: 
   isCompleted: 0
   succeded: 0
